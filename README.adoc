@@ -30,6 +30,7 @@ Create a directory for each one in ETCD. Usin cURl you could do the following to
 curl -L http://<etcdhost>/v2/keys/checkout -XPUT -d dir=true 
 curl -L http://<etcdhost>/v2/keys/checkout/<nodename> -XPUT -d value="<host:port>"&ttl=15
 ----
+
 - <etcdhost>: Host of your ETCD-instance
 - <nodename>: A name for your node for easier debugging
 - <host:port>: Host and port under which the URL resides. In this case the service should be reachable as http://<host:port>/checkout
