@@ -4,20 +4,17 @@ Jochen Mader <jochen.mader@codecentric.de>
 v0.1, October 2015:
 Initial version.
 
-Introduction
-------------
+== Introduction
 
 http://www.haproxy.org/[HAProxy] is a feature rich, easy to configure reverse proxy. + 
 https://github.com/coreos/etcd[ETCD] is the distributed hierarchical key/value-store from the CoreOS-project. +
 This project provides some shell infrastructure to make HAProxy pull lists of hosts and their associated HTTP-URLs from ETCD.
 
-Purpose
--------
+== Purpose
 
 This project is geared towards being used for experimenting with microservices. It gives some ideas on how to do this in production but it's aim is to be usable on a local machine without too much effort.
 
-How it works
-------------
+== How it works
 
 Let's say we want to map the following URLs:
 
@@ -35,8 +32,7 @@ curl -L http://<etcdhost>/v2/keys/checkout/<nodename> -XPUT -d value="<host:port
 - <nodename>: A name for your node for easier debugging
 - <host:port>: Host and port under which the URL resides. In this case the service should be reachable as http://<host:port>/checkout
 
-Starting it
------
+== Starting it
 
 Get ETCD installed. Being an Apple user I use http://brew.sh/[Homebrew] for this: +
 
